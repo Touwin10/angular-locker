@@ -1,0 +1,92 @@
+.container {
+  width: 100%;
+  height: 100%;
+  margin: auto;
+
+  .flip-area {
+    width: 300px;
+    height: 300px;
+    margin: auto;
+    perspective: 1000px;
+    background-color: transparent;
+
+    .flip-wrapper {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      top: 22%;
+      transition: transform 0.6s;
+      transform-style: preserve-3d;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    }
+
+
+    &:hover {
+      .flip-wrapper {
+        transform: rotateY(180deg);
+      }
+    }
+  }
+
+  .locker,
+  .form {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+  }
+
+  .locker {
+    margin: auto;
+    text-align: center;
+    color: gray;
+    border: 1px solid lightgray;
+
+    .icon {
+      display: block;
+      font-size: 65px;
+      margin-top: 90px;
+    }
+  }
+
+  .form {
+    transform: rotateY(180deg);
+    margin-top: 100px;
+    text-align: center;
+
+    label {
+      display: block;
+      font-size: 20px;
+    }
+
+    .row {
+      margin-top: 10px;
+
+      input {
+        width: 50%;
+        height: 20px;
+        border: none;
+        outline: none;
+        padding: 5px 15px;
+        border: 1px solid lightgray;
+      }
+
+      button {
+        border: none;
+        background-color: rgba($color: #ccc, $alpha: .5);
+        height: 32px;
+        text-transform: uppercase;
+        outline: none;
+        cursor: pointer;
+        transition: all .5s;
+
+        &:hover {
+          background-color: rgba($color: #ccc, $alpha: .2);
+        }
+      }
+
+    }
+
+  }
+
+}

@@ -1,0 +1,24 @@
+<div class="container">
+
+  <div class="flip-area">
+    <div class="flip-wrapper">
+
+      <div class="locker">
+        <span class="icon mdi mdi-lock"></span>
+        Private
+      </div>
+
+      <div class="form">
+        <label>Enter Password</label>
+        <div class="row">
+          <input type="password" name="password" [(ngModel)]="password">
+          <button (click)="onSubmit(password)">
+            Submit
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
